@@ -145,16 +145,3 @@ export class UsersResolver {
 এখানে শুধু boilerplate mutation/query-ই তৈরি হয়নি, বরং **সবকিছু একসাথে জোড়া লাগানোই আছে** — `UsersService`, `User` entity, আর সংশ্লিষ্ট DTO (input) সবগুলোই properly wire করা।
 
 ---
-
-## সংক্ষেপে (Quick Summary)
-
-| বিষয় | মূল কথা |
-|---|---|
-| সমস্যা | প্রতিটা নতুন resource-এর জন্য module/controller/service/entity/DTO — এই ৫টা জিনিস বারবার manually বানাতে হয় |
-| সমাধান | `nest g resource` — একটা command দিয়ে সবকিছু automatic জেনারেট |
-| যা যা জেনারেট হয় | Module, Controller/Resolver, Service, Entity, DTO, `.spec` test file |
-| Support করা transport | REST, GraphQL (code-first/schema-first), Microservice, WebSocket Gateway |
-| Service-এর বিশেষত্ব | কোনো নির্দিষ্ট ORM-এ বাঁধা না — placeholder থাকে, নিজের project অনুযায়ী পূরণ করতে হয় |
-| Test file বাদ দিতে | `nest g resource users --no-spec` |
-
-**তোমার [[ecommerce-nextjs-nestjs]] project-এর সাথে সংযোগ:** তুমি এই project-এ modules/products/cart/orders/payments ইত্যাদি অনেকগুলো resource manually structure করেছ। ভবিষ্যতে নতুন resource (যেমন coupon, notification-preference) যোগ করার সময় `nest g resource <name>` দিয়ে module+controller+service+DTO-এর initial boilerplate এক কমান্ডেই বানিয়ে ফেলতে পারবে, এরপর শুধু business logic বসাতে হবে।
