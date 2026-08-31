@@ -1,4 +1,4 @@
-# NestJS CRUD Generator — সহজ বাংলা ব্যাখ্যা
+# NestJS CRUD Generator 
 
 ## সমস্যা কোথায়?
 
