@@ -8,3 +8,5 @@ nest g resource [name]
 nest g resource user
 ```
 ---
+
+[Connect NestJ with Prisma and Neon (Prisma v8)](https://github.com/Omarmdwasimuddin/Connect-NestJ-with-Prisma-and-Neon-Prisma-v8-)
