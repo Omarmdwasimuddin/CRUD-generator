@@ -1,5 +1,8 @@
 ## CRUD generator
 
+> NOTE: nest g resource আসলে TypeORM/Mongoose ধরে নিয়ে একটা generic CRUD scaffold বানায় (entity + spec সহ)
+> but amra prisma v8 er jonno kaj korbo so, utility file lagbe na.
+
 #### Generating a new resource
 ```bash
 nest g resource [name]
