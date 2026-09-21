@@ -195,6 +195,11 @@ export class AppModule {}
 ```
 ---
 
+#### Install koro
+```bash
+npm install @js-temporal/polyfill
+```
+---
 
 #### `main.ts`
 ```bash
