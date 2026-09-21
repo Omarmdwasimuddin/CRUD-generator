@@ -9,4 +9,20 @@ nest g resource user
 ```
 ---
 
+####
+```bash
+nest g module prisma
+```
+```bash
+nest g service prisma
+```
+---
+
 [Connect NestJ with Prisma and Neon (Prisma v8)](https://github.com/Omarmdwasimuddin/Connect-NestJ-with-Prisma-and-Neon-Prisma-v8-)
+
+#### Package install
+```bash
+npm i class-validator class-transformer
+npm i @nestjs/mapped-types
+```
+---
