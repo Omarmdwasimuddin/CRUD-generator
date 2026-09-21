@@ -9,7 +9,7 @@ nest g resource user
 ```
 ---
 
-####
+#### Prisma er service and module create koro.
 ```bash
 nest g module prisma
 ```
