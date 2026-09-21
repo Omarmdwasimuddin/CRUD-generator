@@ -99,7 +99,7 @@ export class UsersService {
     constructor(private prisma: PrismaService) {}
 
     async create(createUserDto: CreateUserDto) {
-        return this.prisma.client.orm.public.User.create(data);
+        return this.prisma.client.orm.public.User.create(createUserDto);
     }
 
     async findAll() {
@@ -111,7 +111,7 @@ export class UsersService {
     }
 
     async update(id: string, updateUserDto: UpdateUserDto) {
-        return this.prisma.client.orm.public.User.where({ id }).update(data);
+        return this.prisma.client.orm.public.User.where({ id }).update(updateUserDto);
     }
 
     async remove(id: string) {
