@@ -28,3 +28,18 @@ npm i class-validator class-transformer
 npm i @nestjs/mapped-types
 ```
 ---
+
+
+#### `prisma.service.ts`
+```bash
+import { Injectable } from '@nestjs/common';
+import { db } from './db.js';
+
+@Injectable()
+export class PrismaService {
+    get client() {
+        return db;
+    }
+}
+```
+---
