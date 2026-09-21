@@ -98,7 +98,7 @@ import { UpdateUserDto } from './dto/update-user.dto.js';
 export class UsersService {
     constructor(private prisma: PrismaService) {}
 
-    async create(data: CreateUserDto) {
+    async create(createUserDto: CreateUserDto) {
         return this.prisma.client.orm.public.User.create(data);
     }
 
@@ -110,7 +110,7 @@ export class UsersService {
         return this.prisma.client.orm.public.User.where({ id }).first();
     }
 
-    async update(id: string, data: UpdateUserDto) {
+    async update(id: string, updateUserDto: UpdateUserDto) {
         return this.prisma.client.orm.public.User.where({ id }).update(data);
     }
 
