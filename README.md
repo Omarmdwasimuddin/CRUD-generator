@@ -56,3 +56,23 @@ import { PrismaService } from './prisma.service.js';
 export class PrismaModule {}
 ```
 ---
+
+#### `dto/create-user.dto.ts`
+```bash
+import { IsString, IsEmail, IsNotEmpty, IsOptional, MinLength } from 'class-validator';
+
+export class CreateUserDto {
+    @IsEmail()
+    email!: string;
+
+    @IsOptional()
+    @IsString()
+    username?: string;
+
+    @IsString()
+    @IsNotEmpty()
+    @MinLength(6)
+    password!: string;
+}
+```
+---
