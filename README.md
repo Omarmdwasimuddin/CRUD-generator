@@ -4,4 +4,7 @@
 ```bash
 nest g resource [name]
 ```
+```bash
+nest g resource user
+```
 ---
