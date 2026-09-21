@@ -76,3 +76,59 @@ export class CreateUserDto {
 }
 ```
 ---
+
+
+#### `dto/update-user.dto.ts`
+```bash
+import { PartialType } from '@nestjs/mapped-types';
+import { CreateUserDto } from './create-user.dto.js';
+
+export class UpdateUserDto extends PartialType(CreateUserDto) {}
+```
+---
+
+#### `users.service.ts`
+```bash
+import { Injectable } from '@nestjs/common';
+import { PrismaService } from '../prisma/prisma.service.js';
+import { CreateUserDto } from './dto/create-user.dto.js';
+import { UpdateUserDto } from './dto/update-user.dto.js';
+
+@Injectable()
+export class UsersService {
+    constructor(private prisma: PrismaService) {}
+
+    async create(data: CreateUserDto) {
+        return this.prisma.client.orm.public.User.create(data);
+    }
+
+    async findAll() {
+        return this.prisma.client.orm.public.User.all();
+    }
+
+    async findOne(id: string) {
+        return this.prisma.client.orm.public.User.where({ id }).first();
+    }
+
+    async update(id: string, data: UpdateUserDto) {
+        return this.prisma.client.orm.public.User.where({ id }).update(data);
+    }
+
+    async remove(id: string) {
+        return this.prisma.client.orm.public.User.where({ id }).delete();
+    }
+}
+```
+---
+
+#### ``
+```bash
+
+```
+---
+
+#### ``
+```bash
+
+```
+---
