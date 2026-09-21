@@ -23,6 +23,8 @@ nest g service prisma
 #### Package install
 ```bash
 npm i class-validator class-transformer
+```
+```bash
 npm i @nestjs/mapped-types
 ```
 ---
